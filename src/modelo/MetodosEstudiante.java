@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class MetodosEstudiante {
     ArrayList <Estudiante> arrayEstudiante;
-    String arregloInformacion[]=new String[3];
+    String arregloInformacion[]=new String[4];
 
     public MetodosEstudiante() {
         arrayEstudiante=new ArrayList<Estudiante>();

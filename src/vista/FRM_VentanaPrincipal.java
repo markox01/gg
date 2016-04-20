@@ -18,6 +18,7 @@ public class FRM_VentanaPrincipal extends javax.swing.JFrame {
         initComponents();
         controlador=new Controlador_FRM_VentanaPrincipal(this);
         this.gUI_Botones1.agregarEventos(controlador);
+        estadoInicial();
     }
     public String[] devolverInformacion(){
  return this.gUI_Informacion1.devolverInformacion();
@@ -28,6 +29,27 @@ public class FRM_VentanaPrincipal extends javax.swing.JFrame {
     public String devolverCedula(){
     return this.gUI_Informacion1.devolverCedula();
     }
+    public void estadoInicial(){
+    this.gUI_Botones1.estadoInicial();
+    this.gUI_Informacion1.estadoInicial();
+    }
+    public void habilitarAgregar(){
+    this.gUI_Botones1.habilitarAgregar();
+    this.gUI_Informacion1.habilitarAgregar();
+    }
+    public void habilitarOpciones(){
+        this.gUI_Botones1.habilitarOpciones();
+        
+    }
+    public void limpiar(){
+    this.gUI_Informacion1.limpiar();
+    
+    }
+    public void deshabilitarCedula(){
+    this.gUI_Informacion1.deshabilitarCedula();
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.

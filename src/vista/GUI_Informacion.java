@@ -43,10 +43,41 @@ public class GUI_Informacion extends javax.swing.JPanel {
         return arreglo;
     }
 public void mostrarInformacion(String arreglo[]){
-this.jt_Cedula.setText(arreglo[0]);
-this.jt_Nombre.setText(arreglo[1]);
-this.jt_Direccion.setText(arreglo[2]);
-this.jcb_Horario.setSelectedIndex(Integer.parseInt(arreglo[3]));
+this.jt_Nombre.setText(arreglo[0]);
+this.jt_Direccion.setText(arreglo[1]);
+this.jcb_Horario.setSelectedIndex(Integer.parseInt(arreglo[2]));
+}
+ public void habilitarAgregar()
+    {
+        this.jt_Cedula.setEnabled(true);
+
+        this.jt_Nombre.setEnabled(true);
+        this.jt_Direccion.setEnabled(true);
+                this.jcb_Horario.setEnabled(true);
+
+             
+
+    }
+public void estadoInicial(){
+this.jt_Cedula.setEnabled(true);
+this.jt_Direccion.setEnabled(false);
+this.jt_Nombre.setEnabled(false);
+this.jcb_Horario.setEnabled(false);
+
+}
+
+public void limpiar(){
+this.jt_Cedula.setText("");
+this.jt_Nombre.setText("");
+this.jt_Direccion.setText("");
+
+}
+public void deshabilitarCedula(){
+   this.jt_Cedula.setEnabled(false);
+this.jt_Direccion.setEnabled(true);
+this.jt_Nombre.setEnabled(true);
+this.jcb_Horario.setEnabled(true);
+ 
 }
     /**
      * This method is called from within the constructor to initialize the form.

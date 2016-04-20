@@ -14,6 +14,7 @@ import vista.FRM_VentanaPrincipal;
 /**
  *
  * @author Marko
+
  */
 public class Controlador_FRM_VentanaPrincipal implements ActionListener{
     FRM_VentanaPrincipal ventana;
@@ -22,7 +23,6 @@ public class Controlador_FRM_VentanaPrincipal implements ActionListener{
     public Controlador_FRM_VentanaPrincipal( FRM_VentanaPrincipal controlador) {
 this.ventana=controlador;
 metodos=new MetodosEstudiante();
-
     }
     
     
@@ -34,9 +34,12 @@ metodos=new MetodosEstudiante();
 if(metodos.buscarEstudiante(ventana.devolverCedula())){
 
 ventana.mostrarInformacion(metodos.arregloInformacion());
+ventana.deshabilitarCedula();
+ventana.habilitarOpciones();
 }else{
         System.out.println("el estudiante no se encuentra");
-
+ventana.habilitarAgregar();
+ventana.deshabilitarCedula();
 
 }
 
@@ -45,20 +48,28 @@ ventana.mostrarInformacion(metodos.arregloInformacion());
     
     if(e.getActionCommand().equals("Agregar")){
         metodos.agregar(ventana.devolverInformacion());
+        ventana.limpiar();
+        ventana.estadoInicial();
     }
     
     if(e.getActionCommand().equals("Modificar")){
         metodos.modificar(ventana.devolverInformacion());
+        ventana.limpiar();
+        ventana.estadoInicial();
+
     }
     
     if(e.getActionCommand().equals("Eliminar")){
         metodos.eliminar(ventana.devolverInformacion());
+    ventana.limpiar();
+        ventana.estadoInicial();
+    }
     }
     
     }
    
     
     
-    }
+    
     
 
