@@ -7,10 +7,7 @@ package vista;
 
 import controlador.Controlador_FRM_VentanaPrincipal;
 
-/**
- *
- * @author Marko
- */
+
 public class FRM_VentanaPrincipal extends javax.swing.JFrame {
 
     /**
