@@ -7,7 +7,7 @@ package vista;
 
 /**
  *
- * @author Marko
+ * @author Mark
  */
 public class GUI_Informacion extends javax.swing.JPanel {
 
